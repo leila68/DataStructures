@@ -65,3 +65,26 @@ double Stack::pop_st()
         return 0;
 }
 
+double Stack::evaluate_postfix(char* exp)
+{
+   for (int i=0; exp[i]; i++)
+   {
+       if(isdigit(exp[i]))
+       {
+           push_st(exp[i]-48);
+       }
+       else
+       {
+           int val1 = pop_st();
+           int val2 = pop_st();
+           switch (exp[i])
+           {
+               case '+': push_st( val2 + val1); break;
+               case '-': push_st(val2 - val1); break;
+               case '*': push_st( val2 * val1); break;
+               case '/': push_st( val2/val1); break;
+           }
+       }
+   }
+    return array[0];
+}
