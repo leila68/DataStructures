@@ -14,7 +14,7 @@
 void initialize_array(int size,int length, int idx, double  valIn, double  valDel);
 void initialize_stack(int size, int lng, double pu);
 void initialize_queue(int size, int lng, double in);
-
+void evaluate_stack(int size);
 /*
 void initialize_array(int size,int length, int idx, double  valIn, double  valDel)
 {
@@ -52,7 +52,9 @@ void initialize_array(int size,int length, int idx, double  valIn, double  valDe
     delete []ind;
 
 }
+*/
 
+/*
 void initialize_stack(int size, int lng, double pu)
 {
     Stack *st = new Stack( size);
@@ -66,7 +68,9 @@ void initialize_stack(int size, int lng, double pu)
 
    delete st;
 }
-*/
+ */
+
+/*
 void initialize_queue(int size, int lng, double in)
 {
     Queue *q1 = new Queue(size,lng);
@@ -79,4 +83,14 @@ void initialize_queue(int size, int lng, double in)
     q1->print_q();
 
     delete q1;
+}
+*/
+
+void evaluate_stack(int size)
+{
+    Stack *st1 = new Stack( size);
+    double result = st1->evaluate_postfix("78*42/+");
+    cout<<result<<"\n";
+
+    delete st1;
 }
