@@ -25,6 +25,8 @@ using namespace std;
 
         double pop_st();
 
+        double evaluate_postfix(char* exp);
+
        ~Stack();
     };
 
