@@ -26,8 +26,10 @@ int main(int argc, char *argv[])
     double valIn =  std::stoi(argv[3]);
    // initialize_stack(size,length,valIn);
 
+ //  initialize_queue( size,length ,valIn);
 
-   //
-    initialize_queue( size,length ,valIn);
+     evaluate_stack(size);
+
+
     return 0;
 }
